@@ -1,10 +1,11 @@
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import ProductViewer from "./components/ProductViewer";
+import Showcase from "./components/Showcase";
 import gsap from "gsap";
-import { ScrollTrigger, SplitText } from "gsap/all"
+import { ScrollTrigger } from "gsap/all"
 
-gsap.registerPlugin(ScrollTrigger, SplitText);
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <ProductViewer />
+      <Showcase />
     </main>
   );
 }
