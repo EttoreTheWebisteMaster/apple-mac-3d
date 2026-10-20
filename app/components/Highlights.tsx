@@ -5,21 +5,21 @@ import { useMediaQuery } from "react-responsive";
 import gsap from "gsap";
 
 export default function Highlights() {
-  const isMobile = useMediaQuery({ query: '(max-width: 1024px'});
+  const isMobile = useMediaQuery({ query: "(max-width: 1024px" });
 
   useGSAP(() => {
-    gsap.to(['.left-column', '.right-column'], {
+    gsap.to([".left-column", ".right-column"], {
       scrollTrigger: {
-        trigger: '#highlights',
-        start: isMobile ? 'bottom bottom' : 'top top'
+        trigger: "#highlights",
+        start: isMobile ? "bottom bottom" : "top top",
       },
       y: 0,
       opacity: 1,
       stagger: 0.5,
       duration: 1,
-      ease: 'power1.inOut'
-    })
-  })
+      ease: "power1.inOut",
+    });
+  });
 
   return (
     <section id="highlights">
@@ -35,31 +35,34 @@ export default function Highlights() {
 
           <div>
             <img src="/sun.png" alt="sun" />
-            <p>A stanning <br />Liquid Retina XDR <br />display.</p>
+            <p>
+              A stanning <br />
+              Liquid Retina XDR <br />
+              display.
+            </p>
           </div>
         </div>
-        
+
         <div className="right-column">
           <div className="apple-gradient">
             <img src="/ai.png" alt="ai" />
-            <p>Built for <br /><span>Apple Intelligence</span>.</p>
+            <p>
+              Built for <br />
+              <span>Apple Intelligence</span>.
+            </p>
           </div>
 
           <div>
             <img src="/battery.png" alt="battery" />
-            <p>Up to
-              <span className="green-gradient">
-              {' '}14 more hours{' '}
-              </span>
-              battery life. 
-              <span className="text-dark-100">
-                {' '}(Up to 24 hours in total){' '}
-              </span>
-              </p>
+            <p>
+              Up to
+              <span className="green-gradient"> 14 more hours </span>
+              battery life.
+              <span className="text-dark-100"> (Up to 24 hours in total) </span>
+            </p>
           </div>
         </div>
       </div>
     </section>
-
   );
 }

@@ -1,4 +1,4 @@
-import {navLinks} from "@/app/constants";
+import { navLinks } from "@/app/constants";
 
 export default function Navbar() {
   return (
@@ -19,7 +19,7 @@ export default function Navbar() {
             <img src="/search.svg" alt="Search" />
           </button>
           <button>
-            <img src="/cart.svg" alt="Cart" />  
+            <img src="/cart.svg" alt="Cart" />
           </button>
         </div>
       </nav>
